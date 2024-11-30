@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Reminder App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="app-wrapper">
+        <div class="container">
+            <h1 class="title"> 💊 Saathi Reminder </h1>
+            <p class="description">Never forget to take your medicine. Schedule reminders effortlessly!</p>
+            <div class="form">
+                <input type="text" id="medicineName" placeholder="Medicine Name" class="form-input">
+                <input type="date" id="reminderDate" class="form-input">
+                <input type="time" id="reminderTime" class="form-input">
+                <button id="scheduleReminder" class="btn">Reminder Scheduled</button>
+            </div>
+            <h2 class="section-title">Your Reminders</h2>
+            <div id="remindersList" class="reminder-list"></div>
+        </div>
+        <div id="notification-container"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

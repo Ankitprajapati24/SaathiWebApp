@@ -1,0 +1,278 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9fafe;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Main Container */
+.main-container {
+    width: 100%;
+    max-width: 800px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f5f9;
+    border-radius: 12px;
+}
+
+.header h1 {
+    font-size: 8rem;
+    font-weight: 700;
+    color: #4a90e2;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Form Section */
+.form-container {
+    padding: 20px;
+}
+
+.form-card {
+    background: #fefefe;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.form-card h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"], input[type="date"], input[type="time"] {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f9fafe;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+.btn-primary {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #357ab7;
+    transform: scale(1.05);
+}
+
+/* Reminder List Section */
+.reminders-container {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.reminder-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.reminders-container h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.reminder-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.reminder-list{
+    background: #f1f5f9;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.reminder-list .info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.reminder-list strong {
+    font-size: 1rem;
+    color: #333;
+}
+
+.reminder-list em {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.reminder-list button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reminder-list button:hover {
+    background-color: #e5554b;
+}
+
+.reminder-card h3 {
+    font-size: 1.2rem;
+    color: #34a853;
+    margin-bottom: 10px;
+}
+
+.reminder-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.card-actions button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background-color: #4285f4;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #3367d6;
+}
+
+.btn-delete {
+    background-color: #ea4335;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #d62d20;
+}
+/* Notifications */
+#notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notification {
+    background: #4a90e2;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    animation: slideIn 0.3s ease-out, fadeOut 5s ease-out 4.7s;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 15px;
+    }
+
+    .form, .reminder {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button {
+        width: 100%;
+    }
+}
